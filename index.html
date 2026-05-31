@@ -56,23 +56,42 @@
         </div>
     </header>
 
-    <section id="about" class="about-section">
+<section id="about" class="about-section">
         <div class="container">
             <h2 data-i18n="about-title">O mnie</h2>
             <div class="about-grid">
-                <div class="about-text">
-                    <p data-i18n="about-p1">Uczę się w technikum na kierunku <strong>Programista (klasa 2)</strong>, gdzie aktywnie rozwijam swoje zainteresowania w obszarze nowoczesnych technologii oraz systemów informatycznych.</p>
-                    <p data-i18n="about-p2">Moim głównym celem jest zdobywanie praktycznych umiejętności — od pracy z bazami danych po optymalizację sprzętu komputerowego, konfigurację sieci i tworzenie aplikacji. Dążę do tworzenia efektywnych rozwiązań, cenię porządek w strukturze danych i zawsze chętnie podejmuję się nowych, ambitnych projektów technicznych.</p>
-                </div>
-                <div class="about-skills">
-                    <h3 data-i18n="about-skills">Technologie</h3>
-                    <div class="skills-icons">
-                        <div class="icon-box" title="HTML5"><i class="devicon-html5-plain colored"></i></div>
-                        <div class="icon-box" title="CSS3"><i class="devicon-css3-plain colored"></i></div>
-                        <div class="icon-box" title="SQL Database"><i class="devicon-azuresqldatabase-plain colored"></i></div>
-                        <div class="icon-box" title="Python"><i class="devicon-python-plain colored"></i></div>
+                
+                <div class="about-left">
+                    <div class="about-text">
+                        <p data-i18n="about-p1">Urodziłem się w Kazachstanie, w mieście Aktobe, a obecnie mieszkam i uczę się w Polsce. Jestem uczniem technikum na kierunku <strong>Programista (klasa 2)</strong>, gdzie aktywnie rozwijam swoje zainteresowania w obszarze nowoczesnych technologii oraz systemów informatycznych.</p>
+                        <p data-i18n="about-p2">Moim głównym celem jest zdobywanie praktycznych umiejętności — od pracy z bazami danych po optymalizację sprzętu komputerowego, konfigurację sieci i tworzenie aplikacji. Dążę do tworzenia efektywnych rozwiązań, cenię porządek в strukturze danych i zawsze chętnie podejmuję się nowych, ambitnych projektów technicznych.</p>
+                    </div>
+                    <div class="about-skills">
+                        <h3 data-i18n="about-skills">Technologie</h3>
+                        <div class="skills-icons">
+                            <div class="icon-box" title="HTML5"><i class="devicon-html5-plain colored"></i></div>
+                            <div class="icon-box" title="CSS3"><i class="devicon-css3-plain colored"></i></div>
+                            <div class="icon-box" title="SQL Database"><i class="devicon-azuresqldatabase-plain colored"></i></div>
+                            <div class="icon-box" title="Python"><i class="devicon-python-plain colored"></i></div>
+                        </div>
                     </div>
                 </div>
+
+                <div class="about-right-content">
+                    <h3 data-i18n="about-gallery-title">Migawki / Galeria</h3>
+                    <div class="about-gallery">
+                        <div class="photo-card main-photo">
+                            <img src="image1.jpg" alt="Moje zdjęcie / Profil">
+                        </div>
+                        <div class="photo-card sub-photo">
+                            <img src="image2.jpg" alt="Aesthetic 1">
+                        </div>
+                        <div class="photo-card sub-photo">
+                            <img src="image3.jpg" alt="Aesthetic 2">
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -105,7 +124,7 @@
         <p data-i18n="footer-text">&copy; 2026 Wszystkie prawa zastrzeżone.</p>
     </footer>
 
-    <script>
+<script>
         const translations = {
             pl: {
                 "nav-home": "Główna",
@@ -115,9 +134,10 @@
                 "hero-subtitle": "Student technikum AWANS",
                 "hero-btn": "O mnie",
                 "about-title": "O mnie",
-                "about-p1": "Uczę się w technikum na kierunku <strong>Programista (klasa 2)</strong>, gdzie aktywnie rozwijam swoje zainteresowania w obszarze nowoczesnych technologii oraz systemów informatycznych.",
+                "about-p1": "Urodziłem się w Kazachstanie, w mieście Aktobe, a obecnie mieszkam i uczę się w Polsce. Jestem uczniem technikum na kierunku <strong>Programista (klasa 2)</strong>, gdzie aktywnie rozwijam swoje zainteresowania w obszarze nowoczesnych technologii oraz systemów informatycznych.",
                 "about-p2": "Moim głównym celem jest zdobywanie praktycznych umiejętności — od pracy z bazami danych po optymalizację sprzętu komputerowego, konfigurację sieci i tworzenie aplikacji. Dążę do tworzenia efektywnych rozwiązań, cenię porządek w strukturze danych i zawsze chętnie podejmuję się nowych, ambitnych projektów technicznych.",
                 "about-skills": "Technologie",
+                "about-gallery-title": "Galeria",
                 "contact-title": "Kontakty",
                 "contact-subtitle": "Skontaktuj się ze mną w sprawie wspólnych projektów lub zadań szkoleniowych",
                 "footer-text": "&copy; 2026 Wszystkie prawa zastrzeżone."
@@ -130,9 +150,10 @@
                 "hero-subtitle": "Student at AWANS technical school",
                 "hero-btn": "About me",
                 "about-title": "About me",
-                "about-p1": "I am studying at a technical school majoring in <strong>Programming (2nd grade)</strong>, where I actively develop my interests in modern technologies and information systems.",
+                "about-p1": "I was born in Kazakhstan, in the city of Aktobe, and currently live and study in Poland. I am a technical school student majoring in <strong>Programming (2nd grade)</strong>, where I actively develop my interests in modern technologies and information systems.",
                 "about-p2": "My main goal is to gain practical skills — from working with databases to optimizing computer hardware, configuring networks, and building applications. I strive to create efficient solutions, value order in data structures, and am always eager to take on new, ambitious technical projects.",
                 "about-skills": "Technologies",
+                "about-gallery-title": "Gallery",
                 "contact-title": "Contact",
                 "contact-subtitle": "Get in touch for collaborative projects or school assignments",
                 "footer-text": "&copy; 2026 All rights reserved."
@@ -145,9 +166,10 @@
                 "hero-subtitle": "Студент техникума AWANS",
                 "hero-btn": "Обо мне",
                 "about-title": "Обо мне",
-                "about-p1": "Я учусь в техникуме на направлении <strong>Программист (2 класс)</strong>, где активно развиваю свои интересы в области современных технологий и информационных систем.",
+                "about-p1": "Я родился в Казахстане, в городе Актобе, а сейчас живу и учусь в Польше. Я являюсь студентом техникума по направлению <strong>Программист (2 класс)</strong>, где активно развиваю свои интересы в области современных технологий и информационных систем.",
                 "about-p2": "Моя главная цель — получение практических навыков: от работы с базами данных до оптимизации компьютерного оборудования, настройки сетей и создания приложений. Я стремлюсь к созданию эффективных решений, ценю порядок в структуре данных и всегда рад новым амбициозным техническим проектам.",
                 "about-skills": "Технологии",
+                "about-gallery-title": "Галерея",
                 "contact-title": "Контакты",
                 "contact-subtitle": "Свяжитесь со мной для совместных проектов или учебных задач",
                 "footer-text": "&copy; 2026 Все права защищены."
@@ -155,7 +177,6 @@
         };
 
         function setLanguage(lang) {
-            // Ищем все элементы с атрибутом data-i18n и меняем текст
             document.querySelectorAll('[data-i18n]').forEach(element => {
                 const key = element.getAttribute('data-i18n');
                 if (translations[lang][key]) {
@@ -163,7 +184,6 @@
                 }
             });
 
-            // Смена графического фокуса (активной кнопки)
             document.querySelectorAll('.lang-btn').forEach(btn => {
                 btn.classList.remove('active');
             });

@@ -302,3 +302,58 @@ section h2::after {
         gap: 15px;
     }
 }
+/* Новая сетка для секции O mnie */
+.about-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about-right-content h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+/* Сетка галереи */
+.about-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* Карточки с фото */
+.photo-card {
+    background-color: #f0f0f0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    position: relative;
+    aspect-ratio: 4 / 3;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Главное большое фото занимает всю верхнюю строчку */
+.main-photo {
+    grid-column: span 2;
+    aspect-ratio: 16 / 9;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Чтобы картинки не сжимались, а красиво обрезались под формат */
+    display: block;
+}
+
+/* Эффект при наведении на фото */
+.photo-card:hover {
+    transform: scale(1.03) translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Адаптивность галереи для мобилок */
+@media (max-width: 768px) {
+    .about-gallery {
+        margin-top: 30px;
+    }
+}
