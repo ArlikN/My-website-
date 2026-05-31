@@ -431,3 +431,36 @@ section h2::after {
     box-shadow: 2px 2px 0px #000; /* Тень уменьшается, имитируя нажатие */
     background-color: #fff; /* Меняет цвет при наведении */
 }
+/* Секретная картинка слева */
+.insta-secret {
+    position: absolute;
+    left: 15px;      /* Прижимаем к левому краю */
+    top: 45%;        /* Опускаем примерно на уровень твоего красного квадрата */
+    width: 45px;     /* Делаем её небольшой */
+    opacity: 0.4;    /* Делаем её полупрозрачной (не сильно заметной) */
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.insta-secret img {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Если хочешь, чтобы картинка была круглой, раскомментируй строку ниже: */
+    /* border-radius: 50%; */ 
+}
+
+/* При наведении мышки картинка проявляется и чуть увеличивается */
+.insta-secret:hover {
+    opacity: 1; /* Становится полностью видимой */
+    transform: scale(1.1) rotate(-5deg); /* Легкий эффект прыжка */
+    cursor: pointer;
+}
+
+/* На мобильных телефонах можно её чуть сдвинуть, чтобы не мешала */
+@media (max-width: 768px) {
+    .insta-secret {
+        left: 10px;
+        width: 35px;
+    }
+}
