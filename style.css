@@ -247,18 +247,7 @@ section h2::after {
     align-items: center;
     gap: 30px; /* Отступ между меню и блоком языков */
 }
-.hero-content h1,
-.hero-content p {
-    color: white; /* Делаем сам текст белым */
-    
-    /* Добавляем жирную черную обводку со всех сторон и тень */
-    text-shadow: 
-        -2px -2px 0 #000,  
-         2px -2px 0 #000,
-        -2px  2px 0 #000,
-         2px  2px 0 #000,
-         4px  4px 0 #000; 
-}
+
 .lang-switcher {
     display: flex;
     gap: 6px;
@@ -380,4 +369,51 @@ section h2::after {
     .photo-card.landscape {
         height: 240px; /* Комфортная высота для горизонтальных фото на смартфоне */
     }
+}
+/* Цвет для твоего имени */
+.hero-content .highlight {
+    color: #8a16d7; /* Яркий акцентный цвет (можешь заменить на свой) */
+}
+
+/* Общие стили текста на главном экране */
+.hero-content h1,
+.hero-content p {
+    color: white; /* Цвет основного текста */
+    
+    /* Твоя черная обводка */
+    text-shadow: 
+        -2px -2px 0 #000,  
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000,
+         4px  4px 0 #000; 
+}
+/* Стиль для кнопки на главном экране (Стиль: Брутализм / Стритвир) */
+.hero-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+    /* Цвета */
+    color: #000; /* Черный текст */
+    background-color: #ffcc00; /* Цвет фона кнопки (можно сделать белым #fff) */
+    
+    /* Жесткая обводка и тень как у стикера */
+    border: 3px solid #000; 
+    box-shadow: 6px 6px 0px #000; 
+    
+    /* Резкая анимация */
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+/* Эффект при наведении (кнопка "вжимается") */
+.hero-btn:hover {
+    transform: translate(4px, 4px); /* Сдвигается вправо-вниз */
+    box-shadow: 2px 2px 0px #000; /* Тень уменьшается, имитируя нажатие */
+    background-color: #fff; /* Меняет цвет при наведении */
 }
