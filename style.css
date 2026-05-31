@@ -314,46 +314,58 @@ section h2::after {
     color: #2c3e50;
 }
 
-/* Сетка галереи */
+/* Умная Bento-сетка для галереи */
 .about-gallery {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.2fr; /* Левая колонка под селфи, правая чуть шире под пейзажи */
     gap: 15px;
+    height: 480px; /* Фиксируем общую высоту сетки, чтобы правые фото идеально совпали с левым */
 }
 
-/* Карточки с фото */
+/* Общие свойства для карточек */
 .photo-card {
-    background-color: #f0f0f0;
+    background-color: #f8f9fa;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    position: relative;
-    aspect-ratio: 4 / 3;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Главное большое фото занимает всю верхнюю строчку */
-.main-photo {
-    grid-column: span 2;
-    aspect-ratio: 16 / 9;
+/* Вертикальное фото растягивается на 2 строки высоты */
+.photo-card.tall {
+    grid-row: span 2;
 }
 
+/* Картинки внутри карточек */
 .photo-card img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Чтобы картинки не сжимались, а красиво обрезались под формат */
+    object-fit: cover; /* Защищает картинки от сплющивания и растягивания */
+    object-position: center 20%; /* Фокусируется чуть выше центра, чтобы лица и головы НЕ срезались */
     display: block;
 }
 
-/* Эффект при наведении на фото */
+/* Эффект легкого объема при наведении */
 .photo-card:hover {
-    transform: scale(1.03) translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transform: scale(1.02) translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
 }
 
-/* Адаптивность галереи для мобилок */
+/* Адаптив для мобильных телефонов */
 @media (max-width: 768px) {
     .about-gallery {
-        margin-top: 30px;
+        grid-template-columns: 1fr; /* На мобилке превращаем в красивую вертикальную ленту */
+        grid-template-rows: auto;
+        height: auto; /* Отменяем фиксированную высоту */
+        gap: 20px;
+    }
+
+    .photo-card.tall {
+        grid-row: span 1;
+        height: 400px; /* Комфортная высота для вертикального селфи на смартфоне */
+    }
+
+    .photo-card.landscape {
+        height: 240px; /* Комфортная высота для горизонтальных фото на смартфоне */
     }
 }
